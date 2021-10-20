@@ -23,6 +23,3 @@ class HLGate(cirq.Gate):
 
     def _circuit_diagram_info_(self, args):
         return "HL"
-
-hlgate = HLGate()
-
