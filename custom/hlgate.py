@@ -19,7 +19,7 @@ class HLGate(cirq.Gate):
         return np.array([
             [1.0,  1.0],
             [1.0, -1.0]
-        ]) / (1 + np.sqrt(5) / 2) # phi
+        ]) / ((1 + np.sqrt(5)) / 2) # phi
 
     def _circuit_diagram_info_(self, args):
         return "HL"
