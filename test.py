@@ -1,18 +1,14 @@
 import cirq
+from custom.hlgate import HLGate
 
-# Pick a qubit.
-qubit = cirq.GridQubit(0, 0)
+# print the Hyahatiph Labs custom gate
 
-# Create a circuit
-circuit = cirq.Circuit(
-    cirq.X(qubit)**0.5,  # Square root of NOT.
-    cirq.measure(qubit, key='m')  # Measurement
+"""Use the custom gate in a circuit."""
+hlg = HLGate()
+circ = cirq.Circuit(
+    hlg.on(cirq.LineQubit(0))
 )
-print("Circuit:")
-print(circuit)
 
-# Simulate the circuit several times.
-simulator = cirq.Simulator()
-result = simulator.run(circuit, repetitions=20)
-print("Results:")
-print(result)
+print("Hyahatiph Labs Gate:")
+print(circ)
+
