@@ -1,5 +1,6 @@
 import cirq;
-import cirq_google;
+import cirq_google
+import numpy as np
 
 """
 Hyahatiph Labs custom gate.
